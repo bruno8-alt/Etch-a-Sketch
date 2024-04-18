@@ -15,15 +15,25 @@ function createGrid(){
         items.forEach(item => {
             item.style.width = `${itemWidth}px`;
             item.style.height = `${itemWidth}px`;
-            item.style.border = "1px solid red";
+            item.style.border = "1px solid white";
             item.style.boxSizing = "border-box"; // Fixed typo: should be "border-box"
-        });
+            item.addEventListener("mouseover", function() {
+                this.style.backgroundColor = getRandomColor();   
+            })
+            item.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "";
+            })})}
+else{alert("Please enter a Number between 1-99");}
+}
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
     }
-else{
-    alert("Please enter a Number between 1-99");
-}}
-    
-   
+    return color;
+}   
+
 
 
      
