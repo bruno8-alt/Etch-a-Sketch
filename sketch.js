@@ -20,9 +20,7 @@ function createGrid(){
             item.addEventListener("mouseover", function() {
                 this.style.backgroundColor = getRandomColor();   
             })
-            item.addEventListener("mouseout", function(){
-                this.style.backgroundColor = "";
-            })})}
+            })}
 else{alert("Please enter a Number between 1-99");}
 }
 function getRandomColor() {
